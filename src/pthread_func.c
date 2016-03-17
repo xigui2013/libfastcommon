@@ -46,6 +46,7 @@ int init_pthread_lock(pthread_mutex_t *pthread_lock)
 			__LINE__, result, STRERROR(result));
 		return result;
 	}
+	//以动态方式创建互斥锁的
 	if ((result=pthread_mutex_init(pthread_lock, &mat)) != 0)
 	{
 		logError("file: "__FILE__", line: %d, " \

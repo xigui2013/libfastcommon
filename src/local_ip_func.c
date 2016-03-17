@@ -41,6 +41,7 @@ bool is_local_host_ip(const char *client_ip)
 
 int insert_into_local_host_ip(const char *client_ip)
 {
+	//ÅĞ¶Ïclient_ipÊÇ·ñÔÚg_local_host_ip_addrsÖĞ
 	if (is_local_host_ip(client_ip))
 	{
 		return 0;
