@@ -37,6 +37,7 @@ typedef struct log_context
 {
 	/* log level value please see: sys/syslog.h
   	   default value is LOG_INFO */
+  	//选择日志级别
 	int log_level;
 
 	/* default value is STDERR_FILENO */
@@ -54,6 +55,10 @@ typedef struct log_context
 	/*
 	rotate the log when the log file exceeds this parameter
 	rotate_size > 0 means need rotate log by log file size
+	*/
+	/*
+	# error log按大小轮转
+	# 设置为0表示不按文件大小轮转，否则当error log达到该大小，就会轮转到新文件中
 	*/
 	int64_t rotate_size;
 
